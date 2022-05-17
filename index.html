@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Estilos CSS perzonalizados  -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- iconos FontAwesome -->
+  <script src="https://kit.fontawesome.com/8c2e7c40ab.js" crossorigin="anonymous"></script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <title>Expense Tracker App</title>
+</head>
+
+<body>
+
+  <div class="app">
+    <h1 class="title">Control de Gastos</h1>
+
+    <div class="balanace-container">
+     <img src="./img/wallet.png" alt="img wallet">
+      <h2>Mi Saldo</h2>
+      <div id="balance"></div>
+    </div>
+
+    <div class="cashflow-container">
+      <div class="income-container">
+        <img src="./img/profits.png" alt="">
+        <h2>Ingresos</h2>
+        <div id="income">$</div>
+      </div>
+      <div class="expense-container">
+        <img src="./img/low-price.png" alt="">
+        <h2>Gastos</h2>
+        <div id="expense">$</div>
+      </div>
+    </div>
+
+    <div class="transaction-container">
+      <h2>Movimientos</h2>
+      <ul id="transaction">
+        <!-- se hizo en html para la estructura pero se maneja con JS
+          <li>
+          Sueldo
+          <div>
+            <span class="income-amt">$</span>
+            <button>X</button>
+          </div>
+        </li>
+        <li>
+          Pago tarjeta
+          <div>
+            <span class="expense-amt">$</span>
+            <button>X</button>
+          </div>
+        </li>
+        <li>
+          Comprar Super
+          <div>
+            <span class="expense-amt">$</span>
+            <button>X</button>
+          </div>
+        </li> -->
+      </ul>
+    </div>
+
+    <div class="form-container">
+      <h2>Agregar Nueva Transacción</h2>
+      <form onsubmit="return false;"> <!-- return para evitar el auto envio del form -->
+        <label for="name">Nombre</label>
+        <input id="name" type="text">
+        <label for="amount" type="number" >Monto</label>
+        <input id="amount" type="number">
+        <button id="incomeBtn">Agregar Ingreso</button>
+        <button id="expenseBtn">Agregar Gasto</button>
+      </form>
+    </div>
+
+  </div>
+
+  <!-- mi JS personalizado -->
+  <script type="text/javascript" src="js/main.js"></script>
+
+
+
+</body>
+
+</html>
